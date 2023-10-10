@@ -4,12 +4,12 @@ metadata:
   name: demo-web-app
   description: The place to be, for great people
   links:
-    - url: https://github.com/brahmdev/scania-backstage/tree/main/demo-web-app
+    - url: https://github.com/brahmdev/sample-create-react-app
       title: Demo Web App
       icon: code
   annotations:
     github.com/project-slug: 'brahmdev/scania-backstage/demo-web-app'
-    backstage.io/techdocs-ref: url:https://github.com/brahmdev/scania-backstage/tree/main/demo-web-app
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: website
   lifecycle: development

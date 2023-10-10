@@ -1,0 +1,44 @@
+# This workflow will run Terraform configuration file
+# and creates a repository for Amazon ECR
+name: Dev Amazon ECR Setup
+
+on: workflow_dispatch
+
+env:
+  AWS_REGION: us-east-1                              # set this to your preferred AWS region, e.g. us-west-1
+  ECR_REPOSITORY: scania-backstage-demo-web-app      # set this to your Amazon ECR repository name
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+  setup-dev-ecr:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: development
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        role-to-assume: arn:aws:iam::190639427775:role/GitHubAction-AssumeRoleWithAction
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+
+    # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+    - name: Terraform Init
+      run: terraform init
+
+    # Generates an execution plan for Terraform
+    - name: Terraform Plan
+      run: terraform plan -input=false
+
+    # On push to "main", build or change infrastructure according to Terraform configuration files
+    - name: Terraform Apply
+      run: terraform apply -auto-approve -input=false

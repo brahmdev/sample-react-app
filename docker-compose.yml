@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: demo-web-app-prod
+    image: demo-web-app-prod
+    build:
+      context: .
+      target: production

@@ -1,0 +1,7 @@
+site_name: 'Demo app website'
+site_description: 'Main documentation for Demo App'
+plugins:
+  - techdocs-core
+nav:
+  - Home: 'index.md'
+  - Setup: 'setup.md'

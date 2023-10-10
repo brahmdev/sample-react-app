@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-web-app
+  description: The place to be, for great people
+  links:
+    - url: https://github.com/brahmdev/scania-backstage/tree/main/demo-web-app
+      title: Demo Web App
+      icon: code
+  annotations:
+    github.com/project-slug: 'brahmdev/scania-backstage/demo-web-app'
+    backstage.io/techdocs-ref: url:https://github.com/brahmdev/scania-backstage/tree/main/demo-web-app
+spec:
+  type: service
+  lifecycle: development
+  system: scania-backstage
+  owner: demo-team
+  consumesApis:
+    - iot-api
+---

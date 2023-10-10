@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: demo-web-app
-  description: The place to be, for great people
+  description: Sample create-react-app project
   links:
     - url: https://github.com/brahmdev/sample-create-react-app
       title: Demo Web App

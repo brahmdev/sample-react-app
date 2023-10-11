@@ -1,16 +1,16 @@
 # CI/CD Pipeline using Github Actions
 
-There are currently 3 GitHub Actions (GHA) available, to build the application, establish the infrastructure before deployment, and performing the deployment.
+There are currently 3 GitHub Actions (GHA) available, to build the application, establish the infrastructure before deployment, and perform the deployment.
 
 1. build.yml
 2. aws-setup-dev-ecr.yml
 3. aws-deploy.yml
 
-Currently, `aws-setup-dev-ecr.yml` and `aws-deploy.yml` of the above actions can be triggered manually but `build.yml` does not have any manual trigger rather it runs on the push of `main` branch.
+Currently, the `aws-setup-dev-ecr.yml` and `aws-deploy.yml` of the above actions can be triggered manually but `build.yml` does not have any manual trigger rather it runs on the push of the `main` branch.
 
 ## Building the App
 
-CI/CD pipeline to test and build the application is present at `.github/workflows/build.yml` file in this repository.
+CI/CD pipeline to test and build the application is present in the `.github/workflows/build.yml` file in this repository.
 This action performs below tasks:
 
 1. Checkout the code from VCS on the action runner
@@ -21,13 +21,13 @@ This action performs below tasks:
 
 ## ECR setup on AWS
 
-We are using Terraform to setup an ECR in the AWS cloud using Github workflow file present at `.github/workflows/aws-setup-dev-ecr.yml`
+We are using Terraform to setup an ECR in the AWS cloud using the GitHub workflow file present at `.github/workflows/aws-setup-dev-ecr.yml`
 This action performs below tasks:
 
 1. Checkout the code from VCS on the action runner
 2. AWS Credential configuration
-   1. AWS assume role is being used alond with Github authentiation for AWS credentials setup.
-   2. Please refer [this](https://aws.amazon.com/blogs/security/use-iam-roles-to-connect-github-actions-to-actions-in-aws/) to connect GHA and IAM roles in the AWS.
+   1. AWS `Aassume Role` is being used along with GitHub authentication for AWS credentials setup.
+   2. Please refer to [this](https://aws.amazon.com/blogs/security/use-iam-roles-to-connect-github-actions-to-actions-in-aws/) to connect GHA and IAM roles in the AWS.
 3. Setup Terraform
 4. Initialize Terraform
 5. Plan Terraform

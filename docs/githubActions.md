@@ -6,6 +6,8 @@ There are currently 3 GitHub Actions (GHA) available, to build the application, 
 2. aws-setup-dev-ecr.yml
 3. aws-deploy.yml
 
+Currently, `aws-setup-dev-ecr.yml` and `aws-deploy.yml` of the above actions can be triggered manually but `build.yml` does not have any manual trigger rather it runs on the push of `main` branch.
+
 ## Building the App
 
 CI/CD pipeline to test and build the application is present at `.github/workflows/build.yml` file in this repository.

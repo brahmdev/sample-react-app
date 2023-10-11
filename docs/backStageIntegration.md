@@ -1,10 +1,10 @@
 # Integrate with Backstage
 
-## Register as Entity in Backstage app
+## Register as an Entity in the Backstage app
 
-### Maually through configuration
+### Manually through configuration
 
-There needs to an entry made in the Backstage configuration file `app-config.yaml`/`app-config.local.yaml`/`app-config.production.yaml` depending upon the environment.
+There needs to be an entry made in the Backstage configuration file `app-config.yaml`/`app-config.local.yaml`/`app-config.production.yaml` depending upon the environment.
 
 The new config entry can be something like below:
 
@@ -23,12 +23,12 @@ catalog:
 
 Follow the below steps in the Backstage UI to register any valid entity/component.
 
-1. Click on `Create` menu on the left side panel
-2. Click on `REGISTER EXISTING COMPONENT` button
+1. Click on the `Create` menu on the left side panel
+2. Click on the `REGISTER EXISTING COMPONENT` button
 3. Enter the URL of the entity config file
-4. Click on Analyze Button
+4. Click on the Analyze Button
 5. Review the config to be imported
-6. Click on `IMPORT` button to finalize the registration process of an Entity.
+6. Click on the `IMPORT` button to finalize the registration process of an Entity.
 
 
 ## Configure Required Entity

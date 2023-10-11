@@ -5,3 +5,5 @@ plugins:
 nav:
   - Home: 'index.md'
   - Setup: 'setup.md'
+  - Github Actions: 'githubActions.md'
+  - Integrate with Backstage: 'backStageIntegration.md'

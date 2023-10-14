@@ -1,12 +1,8 @@
-# This workflow will run Terraform configuration file
+# This workflow will run the Terraform configuration file
 # and creates a repository for Amazon ECR
 name: Dev Amazon ECR Setup
 
 on: workflow_dispatch
-
-env:
-  AWS_REGION: us-east-1                              # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: scania-backstage-demo-web-app      # set this to your Amazon ECR repository name
 
 permissions:
   id-token: write
@@ -26,7 +22,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v2
       with:
         role-to-assume: arn:aws:iam::190639427775:role/GitHubAction-AssumeRoleWithAction
-        aws-region: ${{ env.AWS_REGION }}
+        aws-region: ${{ vars.AWS_REGION }}
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1

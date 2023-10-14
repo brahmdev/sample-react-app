@@ -15,7 +15,7 @@ jobs:
     environment: development
     defaults:
       run:
-        working-directory: ./${{ vars.ECR_SETUP_DIR }}
+        working-directory: ${{ vars.ECR_SETUP_DIR }}
 
     steps:
     - name: Checkout

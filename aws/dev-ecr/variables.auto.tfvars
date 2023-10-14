@@ -1,5 +1,5 @@
 tags = {
-  "Environment" = "Dev"
+  "Environment" = "development"
 }
 
 ecr_name = [

@@ -5,10 +5,6 @@ name: Push to Amazon ECR
 
 on: workflow_dispatch
 
-env:
-  AWS_REGION: us-east-1                              # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: scania-backstage-demo-web-app      # set this to your Amazon ECR repository name
-
 permissions:
   id-token: write
   contents: write
@@ -38,8 +34,8 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v2
       with:
-        role-to-assume: arn:aws:iam::190639427775:role/GitHubAction-AssumeRoleWithAction
-        aws-region: ${{ env.AWS_REGION }}
+        role-to-assume: ${{ vars.ROLE_TO_ASSUME }}
+        aws-region: ${{ vars.AWS_REGION }}
 
     - name: Login to Amazon ECR
       id: login-ecr

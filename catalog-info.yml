@@ -8,7 +8,7 @@ metadata:
       title: Demo Web App
       icon: code
   annotations:
-    github.com/project-slug: 'brahmdev/scania-backstage/demo-web-app'
+    github.com/project-slug: 'brahmdev/sample-create-react-app'
     backstage.io/techdocs-ref: dir:.
 spec:
   type: website

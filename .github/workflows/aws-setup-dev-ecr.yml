@@ -10,9 +10,12 @@ permissions:
 
 jobs:
   setup-dev-ecr:
-    name: Deploy
+    name: setup-dev-ecr
     runs-on: ubuntu-latest
     environment: development
+    defaults:
+      run:
+        working-directory: ./${{ vars.ECR_SETUP_DIR }}
 
     steps:
     - name: Checkout

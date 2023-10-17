@@ -10,7 +10,7 @@ ecr_name = [
 
 image_mutability = "IMMUTABLE"
 
-s3_bucket_name = "dev_scania_backstage"
+s3_bucket_name = "scania_backstage"
 
 s3_bucket_key = "dev"
 

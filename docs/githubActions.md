@@ -1,5 +1,7 @@
 # CI/CD Pipeline using Github Actions
 
+![gh-docker-ecr](./assets/gha-docker-ecr.png)
+
 There are currently 3 GitHub Actions (GHA) available, to build the application, establish the infrastructure before deployment, and perform the deployment.
 
 1. build.yml

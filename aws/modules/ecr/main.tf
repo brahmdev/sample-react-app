@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-east-1"
+  region  = var.region
 }
 
 resource "aws_ecr_repository" "ecr" {
@@ -22,4 +22,13 @@ resource "aws_ecr_repository" "ecr" {
     scan_on_push = true
   }
   tags = var.tags
+}
+
+resource "aws_s3_bucket" "s3_bucket" {
+   bucket = var.s3_bucket_name
+
+    tags = {
+        Name        = var.s3_bucket_tag_name
+        Environment = var.s3_bucket_tag_env
+    }
 }

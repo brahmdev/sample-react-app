@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "scania_backstage"
+    bucket = "scania-backstage"
     region = "us-east-1"
     key = "dev"
   }
